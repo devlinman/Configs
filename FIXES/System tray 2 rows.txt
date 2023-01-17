@@ -1,0 +1,3 @@
+https://github.com/psifidotos/plasma-systray-latte-tweaks
+
+../sys-tray.zip

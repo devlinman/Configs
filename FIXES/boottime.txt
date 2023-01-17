@@ -1,0 +1,5 @@
+systemctl disable systemd-networkd-wait-online.service
+
+# check start-up times
+
+systemd-analyze blame

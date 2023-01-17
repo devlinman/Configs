@@ -1,0 +1,74 @@
+su {
+    cat /run/media/devlinman/DATA/SOFTWARE/Programming/Configs/FSTAB/fstab >> /etc/fstab
+    cat /etc/fstab
+    systemctl daemon-reload
+    sudo mkdir -p /media/DATA
+    sudo mkdir /media/WINDOWS /media/SAFE
+    sudo chown -R devlinman /media && sudo chgrp -R devlinman /media
+    sudo umount /dev/sda1
+    #
+    sudo mount -a
+    cp /media/DATA/SOFTWARE/Programming/Configs/ZSH/zshrc /home/devlinman/.zshrc
+    exit
+}
+exit
+
+pamax neofetch lolcat
+pamac install libinput-gestures xdotool
+# sudo pacman-mirrors -g && sudo pacman -Syy
+sudo gpasswd -a $USER input
+libinput-gestures-setup autostart
+cp /media/DATA/SOFTWARE/Programming/Configs/LIBINPUT\ GESTURES/libinput-gestures.conf /home/devlinman/.config/libinput-gestures.conf
+cp -r /media/DATA/SOFTWARE/Programming/Configs/NEOFETCH/neofetch/ /home/devlinman/.config/
+
+
+sudo restart now
+
+############################################
+pamac install applet-window-buttons-git ttf-jetbrains-mono
+# global shortcuts...
+pamac remove vi && pamac install vim
+
+
+pamax gparted
+
+# pamax lightly-qt lightlyshaders-git
+
+pamax veracrypt
+
+
+sudo cp /media/DATA/SOFTWARE/Programming/Configs/GRUB/grub /etc/default/grub
+# sudo mv /usr/share/grub/themes/manjaro /usr/share/grub/themes/manjaro.bak
+sudo cp -r /media/DATA/SOFTWARE/Programming/Configs/GRUB/manjaro /usr/share/grub/themes/
+update-grub
+
+cp /media/DATA/SOFTWARE/Programming/Configs/Vim/vimrc /home/devlinman/.vimrc
+
+
+
+# sudo cp -r /media/DATA/SOFTWARE/Programming/Configs/GRUB/manjaro /usr/share/grub/themes
+# update-grub
+
+
+
+
+pamax google-chrome
+# Gnome Key ring : [Brave Browser Community] [Github]
+
+pamax latte-dock
+pamax gtk3-nocsd-git
+# Force font DPI =120
+
+pamax konsave
+
+veracrypt --dismount
+veracrypt --auto-mount=favorites
+
+pamax xsel
+date | xsel -ib
+
+pamax strawberry-qt5
+# Coffee Break
+
+
+pamax plasma5-applets-window-title

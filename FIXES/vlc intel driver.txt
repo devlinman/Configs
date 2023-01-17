@@ -1,0 +1,8 @@
+So if you want to open VLC in the terminal , you have to add that line to your ~/.bashrc file or if you want to open it from the application menu or by clicking on a media file , you have to tamper the line beginning with Exec= in the .desktop file /usr/share/applications/vlc.desktop :
+
+Exec=env MESA_LOADER_DRIVER_OVERRIDE=i965 /usr/bin/vlc --started-from-file %U
+And if you want to set that globally for all of your applications , add this line to the file /etc/environment:
+
+MESA_LOADER_DRIVER_OVERRIDE=i965
+
+https://askubuntu.com/questions/1254544/vlc-crashes-when-opening-any-file-ubuntu-20-04

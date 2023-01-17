@@ -1,0 +1,5 @@
+snap-confine has elevated permissions and is not confined but should be. Refusing to continue to avoid permission escalation attacks
+
+sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/snap-confine*
+
+sudo apparmor_parser -r /etc/apparmor.d/*snap-confine*

@@ -1,0 +1,12 @@
+ 
+Refer https://wiki.manjaro.org/index.php/GRUB/Restore_the_GRUB_Bootloader
+
+manjaro-chroot -a
+
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=manjaro --recheck
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+
+sudo reboot now
