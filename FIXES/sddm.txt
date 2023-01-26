@@ -1,0 +1,8 @@
+"Configuration file /var/lib/sddm//config/sddm-greeterrc" is not writable
+
+solution:
+
+sudo chown -R sddm:sddm /var/lib/sddm/.config
+
+Source:
+https://forum.manjaro.org/t/configuration-file-var-lib-sddm-config-sddm-greeterrc-not-writable/96109

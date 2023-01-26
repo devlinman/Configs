@@ -6,3 +6,5 @@ And if you want to set that globally for all of your applications , add this lin
 MESA_LOADER_DRIVER_OVERRIDE=i965
 
 https://askubuntu.com/questions/1254544/vlc-crashes-when-opening-any-file-ubuntu-20-04
+
+For god's sake! use some other goddamn video player!

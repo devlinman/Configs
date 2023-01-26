@@ -1,0 +1,24 @@
+https://askubuntu.com/questions/903490/automatic-shutdown-after-2-hours-on-every-boot
+
+
+
+1.Edit sudoers (you must be root):
+
+gedit /etc/sudoers
+
+At the end add following:
+
+yourusername ALL=(ALL) NOPASSWD: /sbin/shutdown
+
+and save.
+
+2.Crete .sh script:
+
+gedit myscript.sh
+
+add following there:
+
+#!/bin/sh
+sudo shutdown -P +120 # shut down after 120 minutes
+
+3.run "startup applications" tool you just need write it in search box. And press Add button:
