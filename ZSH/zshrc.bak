@@ -1,0 +1,115 @@
+neofetch | lolcat
+
+
+
+
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
+
+
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
+#################################
+#################################
+
+
+
+#Cleanup orphaned packages
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+
+
+#grub update
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+#add new fonts
+alias update-fc='sudo fc-cache -fv'
+
+
+# Pamac commands
+
+alias pamax="pamac install"
+alias pamal="pamac list"
+alias pamar="pamac remove"
+alias pamaq="pamac search"
+
+
+
+# Aliasing my favorite commands
+
+alias ll="ls -la --color"
+alias vi="vim"
+alias neo="neofetch | lolcat"
+alias vi!="sudo vim"
+alias sys="systemctl"
+alias sys-stat="systemctl status"
+alias cls="clear && neo"
+alias pacman="sudo pacman"
+alias :q="exit"
+alias q="exit"
+alias l="ls -l --color"
+alias py="python"
+alias pyserver="python -m http.server 8000"
+alias pls="sudo"
+alias please="sudo"
+alias RM="rm -r"
+alias CP="cp -r"
+
+alias kt="kate </dev/null &>/dev/null" 
+
+# alias dtch="'${1}' \& | disown"
+# alias ditch="$1 </dev/null &>/dev/null"
+
+
+###################################################
+###################################################
+
+######## Personal GIT Aliases #####################
+
+###################################################
+
+
+alias gitinit="git init"
+alias gitadd.="git add ."
+alias gitadd="git add"
+alias gitlog="git log"
+alias gitcheckout="git checkout"
+alias gitmerge="git merge"
+alias gitbranch="git branch"
+alias gitcommit="git commit -m"
+alias gitstat="git status"
+alias git.="git add ."
+alias commit.="git add . && git commit -m"
+alias gitpush="git push -u"
+
+
+
+
+## GIT Folders
+alias cdgitconfigs="cd /home/devlinman/Programming/Configs"
+alias cdgitideas="cd /media/DATA/10.\ Personal/Ideas/Ideas/"
+alias cdgitapps="cd /home/devlinman/Programming/My_Applications/"
+alias cdworkbook="/home/devlinman/Programming/Workbook/"
+
+

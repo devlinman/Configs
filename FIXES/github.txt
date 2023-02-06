@@ -1,0 +1,9 @@
+xdg-mime default github-desktop.desktop x-scheme-handler/x-github-client
+xdg-mime default github-desktop.desktop x-scheme-handler/x-github-desktop-auth
+xdg-mime default github-desktop.desktop x-scheme-handler/x-github-desktop-dev-auth
+
+
+
+from https://github.com/shiftkey/desktop/issues/768
+https://github.com/Foundry376/Mailspring/issues/681
+And install gnome-keyring

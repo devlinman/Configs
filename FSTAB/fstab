@@ -4,4 +4,4 @@
 
 /dev/sda1                                   /media/DATA     ext4   rw,acl     0 0
 
-/dev/nvme0n1p4	/media/WINDOWS	ntfs-3g	norecover,windows_names,rw	0	0
+# /dev/nvme0n1p4	/media/WINDOWS	ntfs-3g	norecover,windows_names,rw	0	0
